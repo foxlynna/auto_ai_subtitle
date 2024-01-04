@@ -4,7 +4,8 @@ import threading
 
 
 def __translate(translator, text, n):
-    # print("\rtranslate line in: ", n + 1, end="")
+    print("\rtranslate line in: ", n + 1, end="")
+    print(text)
     if text == "" or text == '\n':
         return text
 
@@ -12,7 +13,7 @@ def __translate(translator, text, n):
     if re.match(r"^[0-9]+$", text):
         return add_newline_if_missing(text)
 
-    if re.match(r"\d{2}:\d{2}:\d{2},\d{3}\s-->\s\d{2}:\d{2}:\d{2},\d{3}", text):
+    if re.match(r"/d{2}:/d{2}:/d{2},/d{3}/s-->/s/d{2}:/d{2}:/d{2},/d{3}", text):
         return add_newline_if_missing(text)
 
     return add_newline_if_missing(translator.translate(text))
@@ -77,4 +78,4 @@ def do_translate(file1, file2, form, to, thread_nums):
 
 
 if __name__ == '__main__':
-    do_translate('test.srt', 'test1.srt', 'ja', 'zh')
+    do_translate('G:/0_data/01_录播/0_vedal987/2024-01-01/test.srt', 'G:/0_data/01_录播/0_vedal987/2024-01-01/test_zh.srt', 'en', 'zh',10)

@@ -74,4 +74,4 @@ def do_whisper(audio, srt_path, language, hf_model_path, device):
 
 
 if __name__ == '__main__':
-    do_whisper(r"test.mp3", "test.srt", "", "pytorch_model.bin", 'cpu')
+    do_whisper(r"G:/0_data/01_录播/0_vedal987/2024-01-01/vedal987-2024-01-01-01-08-17.mp3", "G:/0_data/01_录播/0_vedal987/2024-01-01/test.srt", "en", "", 'cuda')
